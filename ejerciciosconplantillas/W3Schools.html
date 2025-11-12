@@ -1,37 +1,112 @@
 <!DOCTYPE html>
-<html>
+
+
+
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('/w3images/forestbridge.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-</style>
+
+
+
+
+    <title>Delicias Culinarias</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background-color: #f4f4f4;
+
+        }
+
+        .container {
+
+            width: 80%;
+
+            margin: 20px auto;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: space-around;
+
+        }
+
+        .food-item {
+
+            width: 30%;
+
+            margin: 1em;
+
+            padding: 1em;
+
+            background-color: white;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            text-align: center;
+
+        }
+
+        .food-item img {
+
+            width: 100%;
+
+            height: auto;
+
+            border-radius: 5px;
+
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Paula Merino
-  </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">RUTAS </h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">Cartagena</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Digitalización</a>
-  </div>
-</div>
+    <h1>Delicias Culinarias</h1>
+
+    <div class="container">
+
+        <div class="food-item">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1280px-Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Pizza">
+
+            <h2>Pizza</h2>
+
+            <p>Deliciosa pizza con ingredientes frescos.</p>
+
+        </div>
+
+        <div class="food-item">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Kebab_sandwich.jpg/1280px-Kebab_sandwich.jpg" alt="Kebab">
+
+            <h2>Kebab</h2>
+
+            <p>Exquisito kebab con carne y verduras.</p>
+
+        </div>
+
+        <div class="food-item">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/French_fries.jpg/1280px-French_fries.jpg" alt="Papas Fritas">
+
+            <h2>Papas Fritas</h2>
+
+            <p>Crujientes papas fritas, perfectas para acompañar.</p>
+
+        </div>
+
+    </div>
 
 </body>
+
 </html>
