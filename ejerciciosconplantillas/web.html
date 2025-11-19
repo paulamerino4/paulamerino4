@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Paula</title>
+
+    <style>
+        /* ==================== ESTILOS GENERALES ===================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ==================== HEADER ===================== */
+        header {
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80") center/cover no-repeat;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px 50px;
+        }
+
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: #ff5d72;
+            padding: 14px 30px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff2e50;
+        }
+
+        /* ==================== SOBRE MÍ ===================== */
+        #sobre-mi {
+            padding: 80px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            background: white;
+        }
+
+        #sobre-mi img {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        #sobre-mi .texto {
+            max-width: 500px;
+        }
+
+        #sobre-mi h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .skills li {
+            margin-left: 20px;
+        }
+
+        /* ==================== PORTAFOLIO ===================== */
+        #portafolio {
+            padding: 80px 50px;
+        }
+
+        #portafolio h2 {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* ==================== CONTACTO ===================== */
+        #contacto {
+            padding: 80px 50px;
+            background: #eee;
+        }
+
+        #contacto h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 34px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* ICONOS REDES */
+        .social {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social img {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .social img:hover {
+            transform: scale(1.2);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+
+        /* ==================== RESPONSIVE ===================== */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 42px; }
+            nav ul { gap: 15px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="inicio">
+
+    <nav>
+        <div class="logo">Paula</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Hola, soy Paula</h1>
+        <h2>Amante de la biología, los animales y el chocolate</h2>
+        <a href="#portafolio" class="btn">Ver Portafolio</a>
+    </div>
+
+</header>
+
+<!-- ================= SOBRE MÍ ================= -->
+<section id="sobre-mi">
+    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Paula" alt="Avatar Paula">
+
+    <div class="texto">
+        <h2>Sobre mí</h2>
+        <p>
+            ¡Hola! Soy Paula, una persona creativa, curiosa y con un gran amor por la biología. 
+            Adoro los animales, el chocolate y explorar cómo funciona el mundo natural.
+        </p>
+
+        <h3>Habilidades</h3>
+        <ul class="skills">
+            <li>Curiosidad científica</li>
+            <li>Creatividad</li>
+            <li>Trabajo en equipo</li>
+            <li>Observación y análisis</li>
+            <li>Aprendizaje constante</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ================= PORTAFOLIO ================= -->
+<section id="portafolio">
+    <h2>Mis Proyectos</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://picsum.photos/400/250?random=10" alt="">
+            <div class="card-content">
+                <h3>Proyecto Natura</h3>
+                <p>Un sitio educativo sobre biodiversidad, ecosistemas y conservación.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/400/250?random=11" alt="">
+            <div class="card-content">
+                <h3>Animalpedia</h3>
+                <p>Enciclopedia interactiva sobre especies animales del planeta.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/400/250?random=12" alt="">
+            <div class="card-content">
+                <h3>BioBlog</h3>
+                <p>Un blog de curiosidades científicas y reflexiones sobre la vida.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/400/250?random=13" alt="">
+            <div class="card-content">
+                <h3>EcoTracker</h3>
+                <p>App conceptual para medir hábitos ecológicos diarios.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto">
+    <h2>Contacto</h2>
+
+    <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="5" placeholder="Mensaje" required></textarea>
+        <button class="btn">Enviar</button>
+    </form>
+
+    <div class="social">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111703.png" alt="Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2025 Paula – Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
